@@ -14,6 +14,14 @@ class Session {
         // todo()
     }
 
+    repr() {
+        return {
+            movieId: this.movieId,
+            name: this.name,
+            seats: this.seats
+        }
+    }
+
 }
 
 
