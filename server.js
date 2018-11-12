@@ -3,6 +3,9 @@ const express = require('express');
 const MongoClient = require('mongodb').MongoClient;
 const assert = require('assert');
 
+const session = require('./models/Session')
+const theater = require('./models/Theater')
+
 const url = 'mongodb://localhost:27017';
 const dbName = 'myproject';
 let db;
@@ -16,10 +19,12 @@ const app = express();
 
 app.get('/theaters', (req, res) => {
     // returns json of theathers
+
 })
 
 app.post('/theaters', (req, res) => {
     const theater = new Theater(req.body);
+
 
 })
 
@@ -39,10 +44,12 @@ app.put('/theaters/:name/:session', (req, res) => {
 // app.listen(port, () => console.log(`listening on port ${port}`))
 app.listen(port, () => {
     // Paste this inside `app.listen` callback!
-    MongoClient.connect(url, { useNewUrlParser: true }, function(err, client) {
-      assert.equal(null, err);
-      console.log("Connected successfully to server");
+    MongoClient.connect(url, {
+        useNewUrlParser: true
+    }, function (err, client) {
+        assert.equal(null, err);
+        console.log("Connected successfully to server");
 
-      db = client.db(dbName);
+        db = client.db(dbName);
     });
 })
