@@ -3,8 +3,8 @@ const Session = require('./Session.js')
 
 class Theater {
 
-    constructor(name) {
-        this.name = name;
+    constructor(obj) {
+        this.name = obj.name;
         this.sessions = [];
     }
 
@@ -13,9 +13,17 @@ class Theater {
      * @param {*} movieID - Unique ID 
      * @param {*} name - Name of Movie
      */
-    
+
     addSession(movieID, name) {
-        this.sessions.push({ movieID: movieID, name: name });
+        // X =
+            this.sessions.push({ movieID: movieID, name: name });
+    }
+
+    repr() {
+        return {
+            name: this.name,
+            sessions: this.sessions
+        }
     }
 
 
