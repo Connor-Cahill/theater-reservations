@@ -1,8 +1,8 @@
 class Session {
 
-    constructor(movieId, name) {
-        this.movieId = movieId;
-        this.name = name;
+    constructor(obj) {
+        this.movieId = obj.movieId;
+        this.name = obj.name;
         this.seats = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
             , [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
             , [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]

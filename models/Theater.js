@@ -15,8 +15,8 @@ class Theater {
      */
 
     addSession(movieID, name) {
-        // X =
-            this.sessions.push({ movieID: movieID, name: name });
+        let XSession = new Session({ movieID: movieID, name: name })
+        this.sessions.push(XSession);
     }
 
     repr() {
