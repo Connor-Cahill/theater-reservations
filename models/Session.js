@@ -10,6 +10,11 @@ class Session {
             , [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]];
     }
 
+   /**
+    * Updates the user seats
+    * @param {*} seat  - Seat index
+    * @param {*} status - Status
+    */
     updateSeats(seat, status) {
         // todo()
     }
