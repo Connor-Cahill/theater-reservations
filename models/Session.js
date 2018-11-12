@@ -1,8 +1,8 @@
 class Session {
 
-    constructor(movieId, name) {
-        this.movieId = movieId;
-        this.name = name;
+    constructor(obj) {
+        this.movieId = obj.movieId;
+        this.name = obj.name;
         this.seats = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
             , [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
             , [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -10,8 +10,21 @@ class Session {
             , [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]];
     }
 
+   /**
+    * Updates the user seats
+    * @param {*} seat  - Seat index
+    * @param {*} status - Status
+    */
     updateSeats(seat, status) {
         // todo()
+    }
+
+    repr() {
+        return {
+            movieId: this.movieId,
+            name: this.name,
+            seats: this.seats
+        }
     }
 
 }
