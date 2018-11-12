@@ -34,6 +34,11 @@ app.get('/theaters', (req, res) => {
 
 app.post('/theaters', (req, res) => {
     const theater = new Theater(req.body);
+    const db = client.db(theaters)
+    db('theaters').insertOne({
+        theater: req.body.theater
+    })
+    return res.redirect('/theaters')
 
 
 })
