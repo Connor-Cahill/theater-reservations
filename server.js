@@ -19,6 +19,16 @@ const app = express();
 
 app.get('/theaters', (req, res) => {
     // returns json of theathers
+    const db = client.db(theaters)
+    db.theaters.find({
+        movieId,
+        name
+    })
+
+    return res.json(db)
+
+
+
 
 })
 
@@ -38,6 +48,10 @@ app.get('/theaters/:name/:session', (req, res) => {
 
 app.put('/theaters/:name/:session', (req, res) => {
     //updates db when user buys a seat
+    // const new_resvation = db.collection('Theaters').insertOne({
+
+    // })
+
 
 })
 
